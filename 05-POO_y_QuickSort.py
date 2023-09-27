@@ -104,17 +104,17 @@ class ListaEmpleados:
 mis_empleados = ListaEmpleados()
 
 
-for i in range(100):
+for i in range(50000):
     nombre = f"Empleado{i+1}"  # Nombre default 'Empleado'
     salario = random.randint(1000, 2000)  # Salario aleatorio entre 1000 y 2000
     puesto = f"Puesto{i+1}"  # Puesto default 'Puesto'
     empleado = EmpleadoTiempoCompleto(nombre, salario, puesto, 0)  # Ajusta según el tipo de empleado
     mis_empleados.contratar(empleado)
 
-for i in range(100):
-    nombre = f"Freelancer{i+1}"  # Nombre default 'Empleado'
-    tarifa_hora = random.randint(7, 20)  # Salario aleatorio entre 1000 y 2000
-    horas_por_mes = random.randint(60, 90)  # Salario aleatorio entre 1000 y 2000
+for i in range(50000):
+    nombre = f"Freelancer{i+1}"  # Nombre default 'Freelancer'
+    tarifa_hora = random.randint(7, 20)  # Tarifa aleatoria entre 7 y 20usd
+    horas_por_mes = random.randint(60, 90)  # Entre 60 y 90 horas por mes aleatorias 
     puesto = f"Puesto{i+1}"  # Puesto default 'Puesto'
     empleado = EmpleadoTiempoParcial(nombre, puesto, tarifa_hora, horas_por_mes)  # Ajusta según el tipo de empleado
     mis_empleados.contratar(empleado)
